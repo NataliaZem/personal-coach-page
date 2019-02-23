@@ -6,84 +6,101 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Success</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
     <!-- menu, banner -->
     <header>
         <nav>
-            <div class="logo">
-                <h2>Allan Johnson</h2>
-                <h1>Personal Life Coach</h1>
+            <div class="container">
+                <div class="flex">
+                    <div class="logo">
+                        <h2>Allan Johnson</h2>
+                        <h1>Personal Life Coach</h1>
+                    </div>
+                    <ul>
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Services</li>
+                        <li>Blog</li>
+                        <li>Contact</li>
+                    </ul>
+                    <div class="hamburger"></div>
+                </div>
             </div>
-            <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Services</li>
-                <li>Blog</li>
-                <li>Contact</li>
-            </ul>
-            <button></button>
         </nav>
-        <div class="banner">
-            <h6>Ambition is the first step towards</h6>
-            <h2>Success</h2>
-            <button>Book Now</button>
+        <div class="banner foto">
+            <div class="container">
+                <h6>Ambition is the first step towards</h6>
+                <h2>Success</h2>
+                <button>Book Now</button>
+            </div>
         </div>
     </header>
     <main>
         <!-- about -->
         <article>
-            <h3>About me</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            <br><br>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <button>Read More</button>
+            <div class="container">
+                <h3>About<br>me</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                <br><br>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <button>Read More</button>
+            </div>
         </article>
         <!-- foto-man -->
         <figure>
             <div class="foto"></div>
         </figure>
         <!-- help -->
-        <section class="help">
-            <h3>How can i help you</h3>
-            <div class="booking">
-                <p>Nothing to book at the moment</p>
-                <button>Book It</button>
+        <section class="help foto">
+            <div class="container">
+                <h3>How i can<br>help you</h3>
+                <div class="booking flex">
+                    <p>Nothing to book at the moment</p>
+                    <button>Book It</button>
+                </div>
+                <button>More Services</button>
             </div>
-            <button>More Services</button>
         </section>
         <!-- contact -->
         <section class="contact">
-            <div class="data">
-                <h3>Contact</h3>
-                <p>500 Terry Francois Street<br>
-                San Francisco, CA 94158
-                <br><br>
-                Tel: 123-456-7890<br>
-                Fax: 123-456-7890
-                <br><br>
-                info@mysite.com
-                </p>
-                <div class="socials">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-youtube"></i>
+            <div class="container">
+                <div class="data">
+                    <h3>Contact</h3>
+                    <p>500 Terry Francois Street<br>
+                    San Francisco, CA 94158
+                    <br><br>
+                    Tel: 123-456-7890<br>
+                    Fax: 123-456-7890
+                    <br><br>
+                    info@mysite.com
+                    </p>
+                    <div class="socials">
+                        <i class="fab fa-facebook-f icon"></i>
+                        <i class="fab fa-twitter icon"></i>
+                        <i class="fab fa-instagram icon"></i>
+                        <i class="fab fa-youtube icon"></i>
+                    </div>
                 </div>
+                <!-- form -->
+                <form action="mailto: nzemla99@gmail.com" method="post" enctype="text/plain">
+                    <div>
+                        <input name="name" type="text" placeholder="Name"><br>
+                        <input name="email" type="text" placeholder="Email"><br>
+                        <input name="subject" type="text" placeholder="Subject"><br>
+                        <textarea name="message" placeholder="Message"></textarea>
+                        <div class="contact-buttons flex">
+                            <input type="reset" value="Reset">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </div>
+                </form>
             </div>
-            <form action="mailto: nzemla@gmail.com" method="post" enctype="text/plain">
-                <div>
-                    <input name="name" placeholder="Name"><br>
-                    <input name="email" placeholder="Email"><br>
-                    <input name="subject" placeholder="Subject"><br>
-                    <textarea name="message" placeholder="Message"></textarea>
-                    <input type="submit" value="Submit">
-                    <input type="reset" value="Reset">
-                </div>
-            </form>
         </section>
     </main>
+    <!-- footer -->
     <footer>
         <p>&copy 2019 by Personal Life Coach. Inspired by Wix.com
     </footer>
