@@ -1,1 +1,1 @@
-life version: https://nataliazem.github.io/success-page/
+life version: https://nataliazem.github.io/motivation-page/
