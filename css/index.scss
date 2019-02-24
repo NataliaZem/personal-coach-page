@@ -97,6 +97,7 @@ nav {
     z-index: 1;
     position: relative;
     div {
+        text-align: center;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
@@ -285,6 +286,7 @@ article {
         }
         figure {
             width: 50%;
+            height: 70vh;
             position: relative;
         }
         figure::after, figure::before {

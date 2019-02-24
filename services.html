@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Services</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/services.css">
+</head>
+<body>
+    <!-- menu, banner -->
+    <nav>
+        <div class="container">
+            <div class="flex">
+                <div class="logo">
+                    <h2>Allan Johnson</h2>
+                    <h1>Personal Life Coach</h1>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.htmlt">About</a></li>
+                    <li><a href="services.html"><span>Services</span></a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html">Contact</a></li>
+                </ul>
+                <div class="hamburger" onclick="hamburgerChange(this); menuShow();">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+        </div>
+        <ol id="menu">
+            <li><a href="#home"><span>Home</span></a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ol>
+    </nav>
+    <!-- main -->
+    <main class="foto">
+        <div class="container">
+            <h3>Services</h3>
+            <div id="more-info">
+                <div id="learn-more" class="hide">
+                    <button id="back" onclick="back();"><i class="fas fa-angle-left"></i> Back</button>
+                    <h4 id="h4-more">One On One Coaching</h4>
+                    <h5 id="h5-more">1 hr | $70</h5>
+                    <button>Book Now</button>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    <h6>Location & Contact Details</h6>
+                    <p><br>
+                    Tel: 123-456-7890<br>
+                    Email: info@mysite.com<br>
+                    Terry A Francois Boulevard, San Francisco, 94158</p>
+                </div>
+                <div id="transparent">
+                    <div class="moduls flex">
+                        <button class="left" onclick="changeLeft();">Personal Growth</button>
+                        <button class="right" onclick="changeRight();">Career Ambitions</button>
+                    </div>
+                    <div class="services-wrapper flex">
+                        <div class="services-item">
+                            <h4 id="h4-1">One On One Coaching</h4>
+                            <br>
+                            <h5 id="h5-1">1 hr | $70.00</h5>
+                            <br>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...<br><span onclick="learnMore(); learnMore1();">Learn More</span></p>
+                            <button>Book It</button> 
+                        </div>
+                        <div class="services-item">
+                            <h4 id="h4-2">Couple's Guidance</h4>
+                            <br>
+                            <h5 id="h5-2">1 hr 30 min | $120.00</h5>
+                            <br>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...<br><span onclick="learnMore(); learnMore2();">Learn More</span></p>
+                            <button>Book It</button> 
+                        </div>
+                        <div class="services-item">
+                            <h4 id="h4-3">Self-Improvement Workshop</h4>
+                            <br>
+                            <h5 id="h5-3">45 min | $90.00</h5>
+                            <br>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...<br><span onclick="learnMore(); learnMore3();">Learn More</span></p>
+                            <button>Book It</button> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- contact -->
+    <section id="contact">
+        <div class="container">
+            <div class="flex">
+                <div class="data">
+                    <h3>Contact</h3>
+                    <p>500 Terry Francois Street<br>
+                    San Francisco, CA 94158
+                    <br><br>
+                    Tel: 123-456-7890<br>
+                    Fax: 123-456-7890
+                    <br><br>
+                    info@mysite.com
+                    </p>
+                    <div class="socials">
+                        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f icon"></i></a>
+                        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter icon"></i></a>
+                        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram icon"></i></a>
+                        <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube icon"></i></a>
+                    </div>
+                </div>
+                <!-- form -->
+                <form action="mailto: nzemla99@gmail.com" method="post" enctype="text/plain">
+                    <div>
+                        <input name="name" type="text" placeholder="Name"><br>
+                        <input name="email" type="text" placeholder="Email"><br>
+                        <input name="subject" type="text" placeholder="Subject"><br>
+                        <textarea name="message" placeholder="Message"></textarea>
+                        <div class="contact-buttons flex">
+                            <input type="reset" value="Reset">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer>
+        <p>&copy 2019 by Personal Life Coach. Inspired by Wix.com</p>
+    </footer>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script src="app/main.js"></script>
+    </body>
+</html>

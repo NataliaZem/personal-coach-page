@@ -1,1 +1,167 @@
-/* No CSS *//*# sourceMappingURL=services.css.map */
+main {
+  padding: 4em 0;
+  background-image: url("../assets/img/home/mountains.jpg");
+  background-attachment: fixed;
+}
+
+main .moduls {
+  width: 90%;
+  margin: 0 auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .moduls button {
+  border: 0;
+  font-weight: 600;
+  font-size: 1.2em;
+  background-color: transparent;
+  color: #000000;
+}
+
+main .moduls button:hover {
+  color: #57bbbf;
+}
+
+main .services-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .services-wrapper .services-item {
+  height: 300px;
+  line-height: 1.5;
+  background-color: #ffffff;
+  padding: 2em 2.5em;
+  margin: 10px 0;
+  position: relative;
+}
+
+main .services-wrapper .services-item h4 {
+  font-size: 2em;
+}
+
+main .services-wrapper .services-item h5 {
+  font-size: 1.2em;
+}
+
+main .services-wrapper .services-item p {
+  line-height: 1.5;
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+main .services-wrapper .services-item p span {
+  cursor: pointer;
+  color: #000000;
+  text-decoration: underline;
+}
+
+main .services-wrapper .services-item button {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  width: 90%;
+  padding: 5px 0;
+}
+
+/* main min.768px */
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 10px;
+  }
+  main {
+    padding: 5em 0;
+  }
+  main .moduls {
+    margin-top: 3em;
+    margin-bottom: 2em;
+  }
+  main .moduls p {
+    font-size: 1.8em;
+  }
+  main .services-wrapper {
+    margin-bottom: 3em;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  main .services-wrapper .services-item {
+    width: 32%;
+    height: 340px;
+  }
+  main #learn-more {
+    text-align: center;
+    position: relative;
+  }
+  main #learn-more #back {
+    background-color: transparent;
+    color: #000000;
+    font-weight: 600;
+    border: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  main #learn-more h4 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 3em;
+    font-weight: 800;
+    padding: 0 200px;
+    margin-bottom: .4em;
+  }
+  main #learn-more h5 {
+    margin-bottom: 2em;
+    font-size: 1.5em;
+    font-weight: 300;
+  }
+  main #learn-more button {
+    margin-bottom: 4em;
+  }
+  main #learn-more p {
+    line-height: 2;
+    font-size: 1.3em;
+    padding: 0 150px;
+  }
+  main #learn-more h6 {
+    margin-top: 2em;
+    font-weight: 300;
+    font-size: 2em;
+  }
+}
+
+/* main min.1050px */
+@media screen and (min-width: 1050px) {
+  body {
+    font-size: 12px;
+  }
+  main .services-wrapper .services-item {
+    height: 410px;
+  }
+  main #learn-more {
+    padding-bottom: 3em;
+  }
+}
+
+.hide {
+  display: none;
+}
+/*# sourceMappingURL=services.css.map */

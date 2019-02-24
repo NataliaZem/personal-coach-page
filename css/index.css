@@ -106,6 +106,7 @@ nav {
 }
 
 nav div {
+  text-align: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -155,7 +156,6 @@ nav div ul a:hover {
 
 nav div .hamburger {
   z-index: 1;
-  background-color: aqua;
   cursor: pointer;
   position: relative;
 }
@@ -348,6 +348,7 @@ article button {
   }
   .presentation figure {
     width: 50%;
+    height: 70vh;
     position: relative;
   }
   .presentation figure::after, .presentation figure::before {
@@ -610,4 +611,4 @@ footer {
   font-size: 10px;
   padding: 10px 40px;
 }
-/*# sourceMappingURL=home.css.map */
+/*# sourceMappingURL=index.css.map */
