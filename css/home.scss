@@ -10,6 +10,7 @@ $letter-spacing: 1px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -21,7 +22,7 @@ body {
         margin: 0 auto;
         padding: 0 15px;
     }
-    ul {
+    ul, ol {
         list-style-type: none;
         margin: 0;
         padding: 0;
@@ -71,6 +72,9 @@ body {
         font-size: 1.2em;
         line-height: 2;
     }
+    span {
+        color: $bg-color-green;
+    }
 }
 /* body min. 768px */
 @media screen and (min-width: 768px) {
@@ -86,77 +90,99 @@ body {
 }
 
 /* menu, banner */
-header {
-    text-align: center;
-    nav {
-        padding: 20px 0;
-        background-color: $bg-color-white;
-        box-shadow: 0px 5px 12px 0px rgba(0,0,0,0.18);
-        div {
+nav {
+    padding: 20px 0;
+    background-color: $bg-color-white;
+    box-shadow: 0px 5px 12px 0px rgba(0,0,0,0.18);
+    z-index: 1;
+    position: relative;
+    div {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        h2 {
+            text-transform: uppercase;
+            font-weight: 800;
+            font-size: 1.8em;
+            letter-spacing: 3px;
+        }
+        h1 {
+            font-weight: 300;
+            font-size: 1.2em;
+            letter-spacing: 3px;
+        }
+        ul {
+            display: none;
             flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            h2 {
-                text-transform: uppercase;
-                font-weight: 800;
-                font-size: 1.8em;
-                letter-spacing: 3px;
+            font-size: 1.4em;
+            li {
+                margin-left: 1em;
             }
-            h1 {
-                font-weight: 300;
-                font-size: 1.2em;
-                letter-spacing: 3px;
+            a {
+                display: block;
             }
-            ul {
-                display: none;
-                flex-direction: row;
-                font-size: 1.4em;
-                li {
-                    margin-left: 1em;
-                    span {
-                        color: $bg-color-green;
-                    }
-                }
-                a:hover {
-                    color: $bg-color-green;
-                }
-            }
-            /* hamburger-button */
-            .hamburger {
-                cursor: pointer;
-                position: relative;
-            }
-            .hamburger, .hamburger::after, .hamburger::before {
-                width: 25px;
-                height: 4px;
-                border-radius: 2px;
-                background-color: $buttons-color;
-                transition: 0.3s;
-            }
-            .hamburger::after, .hamburger::before {
-                position: absolute;
-                left: 0;
-                content: '';
-            }
-            .hamburger::after {
-                top: -10px;
-            }
-            .hamburger::before {
-                bottom: -10px;
-            }
-            .change .hamburger {
-                opacity: 0;
-            }
-            .change .hamburger::after {
-                top: 10px;
-                transform: rotate(45deg);
-            }
-            .change .hamburger::before {
-                bottom: 10px;
-                transform: rotate(-45deg);
+            a:hover {
+                color: $bg-color-green;
             }
         }
+        /* hamburger-button */
+        .hamburger {
+            z-index: 1;
+            background-color: aqua;
+            cursor: pointer;
+            position: relative;
+        }
+        .bar1, .bar2, .bar3 {
+            right: 15px;
+            position: absolute;
+            width: 25px;
+            height: 4px;
+            border-radius: 2px;
+            background-color: $buttons-color;
+            transition: 0.3s;
+        }
+        .bar1 {
+            transform: translateY(-10px);
+        }
+        .bar3 {
+            transform: translateY(10px);
+        }
+        .change .bar2 {
+            opacity: 0;
+        }
+        .change .bar3 {
+            transform: rotate(-45deg);
+        }
+        .change .bar1 {
+            transform: rotate(45deg);
+        }
     }
+    ol {
+        position: absolute;
+        top: 80px;
+        padding: 30px 0;
+        text-align: center;
+        display: none;
+        width: 100%;
+        background-color: $bg-color-white;
+        flex-direction: column;
+        align-items: center;
+        li {
+            width: 50%;
+            border-bottom: 1px solid $buttons-color;
+            padding: 20px;
+            font-size: 1.5em;
+        }
+        li:last-child {
+            border-bottom: 0;
+        }
+    }
+    .show {
+        display: flex;
+    }
+}
+header {
+    text-align: center;
     .banner {
         background-image: url('../assets/img/home/banner.jpg');
         background-position: center;
@@ -181,25 +207,26 @@ header {
 }
 /* menu, banner min. 768px */
 @media screen and (min-width: 768px) {
-    header {
-        nav {
-            position: sticky;
-            top: 0;
-            div {
-                h2 {
-                    font-size: 1.3em;
-                }
-                h1 {
-                    font-size: 1.1em;
-                }
-                ul {
-                    display: flex;
-                }
-                .hamburger {
-                    display: none;
-                }
+    
+    nav {
+        position: sticky;
+        top: 0;
+        div {
+            h2 {
+                font-size: 1.3em;
+            }
+            h1 {
+                font-size: 1.1em;
+            }
+            ul {
+                display: flex;
+            }
+            .hamburger {
+                display: none;
             }
         }
+    }
+    header {
         .banner {
             background-attachment: fixed;
             button {
@@ -225,7 +252,7 @@ header {
 
 /* about */
 article {
-    padding: 4em 0;
+    padding: 4em 15px;
     button {
         margin-top: 30px;
     }
@@ -234,12 +261,13 @@ article {
 /* foto-man */
 .presentation {
     width: 100%;
+    flex-direction: column;
     figure {
-        width: 100px;
         div {
+            max-width: 525px;
             background-image: url('../assets/img/home/man.jpg');
             background-position: top;
-            width: 100px;
+            width:100%;
             height: 50vh;
         }
     }
@@ -247,6 +275,9 @@ article {
 /* about, foto-man min. 768px */
 @media screen and (min-width: 768px) {
     .presentation {
+        max-width: 1050px;
+        padding: 0 15px;
+        margin: 0 auto;
         flex-direction: row;
         justify-content: center;
         align-items: center;

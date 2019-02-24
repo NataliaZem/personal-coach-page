@@ -3,6 +3,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -17,7 +18,7 @@ body .container {
   padding: 0 15px;
 }
 
-body ul {
+body ul, body ol {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -79,6 +80,10 @@ body p {
   line-height: 2;
 }
 
+body span {
+  color: #57bbbf;
+}
+
 /* body min. 768px */
 @media screen and (min-width: 768px) {
   body {
@@ -91,18 +96,16 @@ body p {
 
 /* body min. 1150px */
 /* menu, banner */
-header {
-  text-align: center;
-}
-
-header nav {
+nav {
   padding: 20px 0;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, 0.18);
           box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, 0.18);
+  z-index: 1;
+  position: relative;
 }
 
-header nav div {
+nav div {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -116,20 +119,20 @@ header nav div {
   /* hamburger-button */
 }
 
-header nav div h2 {
+nav div h2 {
   text-transform: uppercase;
   font-weight: 800;
   font-size: 1.8em;
   letter-spacing: 3px;
 }
 
-header nav div h1 {
+nav div h1 {
   font-weight: 300;
   font-size: 1.2em;
   letter-spacing: 3px;
 }
 
-header nav div ul {
+nav div ul {
   display: none;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -138,24 +141,28 @@ header nav div ul {
   font-size: 1.4em;
 }
 
-header nav div ul li {
+nav div ul li {
   margin-left: 1em;
 }
 
-header nav div ul li span {
+nav div ul a {
+  display: block;
+}
+
+nav div ul a:hover {
   color: #57bbbf;
 }
 
-header nav div ul a:hover {
-  color: #57bbbf;
-}
-
-header nav div .hamburger {
+nav div .hamburger {
+  z-index: 1;
+  background-color: aqua;
   cursor: pointer;
   position: relative;
 }
 
-header nav div .hamburger, header nav div .hamburger::after, header nav div .hamburger::before {
+nav div .bar1, nav div .bar2, nav div .bar3 {
+  right: 15px;
+  position: absolute;
   width: 25px;
   height: 4px;
   border-radius: 2px;
@@ -164,34 +171,66 @@ header nav div .hamburger, header nav div .hamburger::after, header nav div .ham
   transition: 0.3s;
 }
 
-header nav div .hamburger::after, header nav div .hamburger::before {
-  position: absolute;
-  left: 0;
-  content: '';
+nav div .bar1 {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 
-header nav div .hamburger::after {
-  top: -10px;
+nav div .bar3 {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
 }
 
-header nav div .hamburger::before {
-  bottom: -10px;
-}
-
-header nav div .change .hamburger {
+nav div .change .bar2 {
   opacity: 0;
 }
 
-header nav div .change .hamburger::after {
-  top: 10px;
+nav div .change .bar3 {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+nav div .change .bar1 {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-header nav div .change .hamburger::before {
-  bottom: 10px;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+nav ol {
+  position: absolute;
+  top: 80px;
+  padding: 30px 0;
+  text-align: center;
+  display: none;
+  width: 100%;
+  background-color: #ffffff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav ol li {
+  width: 50%;
+  border-bottom: 1px solid #000000;
+  padding: 20px;
+  font-size: 1.5em;
+}
+
+nav ol li:last-child {
+  border-bottom: 0;
+}
+
+nav .show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header {
+  text-align: center;
 }
 
 header .banner {
@@ -221,23 +260,23 @@ header .banner button {
 
 /* menu, banner min. 768px */
 @media screen and (min-width: 768px) {
-  header nav {
+  nav {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
   }
-  header nav div h2 {
+  nav div h2 {
     font-size: 1.3em;
   }
-  header nav div h1 {
+  nav div h1 {
     font-size: 1.1em;
   }
-  header nav div ul {
+  nav div ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  header nav div .hamburger {
+  nav div .hamburger {
     display: none;
   }
   header .banner {
@@ -263,7 +302,7 @@ header .banner button {
 
 /* about */
 article {
-  padding: 4em 0;
+  padding: 4em 15px;
 }
 
 article button {
@@ -271,7 +310,16 @@ article button {
 }
 
 /* foto-man */
-figure div {
+.presentation {
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.presentation figure div {
+  max-width: 525px;
   background-image: url("../assets/img/home/man.jpg");
   background-position: top;
   width: 100%;
@@ -281,6 +329,9 @@ figure div {
 /* about, foto-man min. 768px */
 @media screen and (min-width: 768px) {
   .presentation {
+    max-width: 1050px;
+    padding: 0 15px;
+    margin: 0 auto;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;

@@ -11,25 +11,36 @@
 </head>
 <body>
     <!-- menu, banner -->
-    <header>
-        <nav>
-            <div class="container">
-                <div class="flex">
-                    <div class="logo">
-                        <h2>Allan Johnson</h2>
-                        <h1>Personal Life Coach</h1>
-                    </div>
-                    <ul>
-                        <li><a href="#"><span>Home</span></a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                    <div class="hamburger"></div>
+    <nav>
+        <div class="container">
+            <div class="flex">
+                <div class="logo">
+                    <h2>Allan Johnson</h2>
+                    <h1>Personal Life Coach</h1>
+                </div>
+                <ul>
+                    <li><a href="#home"><span>Home</span></a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger" onclick="hamburgerChange(this); menuShow();">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
                 </div>
             </div>
-        </nav>
+        </div>
+        <ol id="menu">
+            <li><a href="#home"><span>Home</span></a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ol>
+    </nav>
+    <header id="home">
         <div class="banner foto">
             <div class="container">
                 <h6>Ambition is the first step towards</h6>
@@ -42,20 +53,18 @@
     <main>
         <!-- about -->
         <section>
-            <div class="container">
-                <div class="presentation flex">
-                    <article id="about">
-                        <h3>About<br>me</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-                        <br><br>
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-                        <button>Read More</button>
-                    </article>
-                    <!-- foto-man -->
-                    <figure>
-                        <div class="foto"></div>
-                    </figure>
-                </div>
+            <div class="presentation flex">
+                <article id="about">
+                    <h3>About<br>me</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                    <br><br>
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                    <button>Read More</button>
+                </article>
+                <!-- foto-man -->
+                <figure>
+                    <div class="foto"></div>
+                </figure>
             </div>
         </section>
         
@@ -116,5 +125,6 @@
     <footer>
         <p>&copy 2019 by Personal Life Coach. Inspired by Wix.com
     </footer>
+    <script src="app/main.js"></script>
 </body>
 </html>
