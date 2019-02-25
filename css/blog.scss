@@ -1,0 +1,136 @@
+aside {
+    padding: 4em 0;
+    background-image: url('../assets/img/blog/kayak.jpg');
+    background-position: 45%;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 60vh;
+}
+
+main {
+    padding: 3em 15px;
+    .blog-wrapper {
+        max-width: 1050px;
+        margin: 0 auto;
+        flex-direction: column;
+        align-items: center;
+        article {
+            padding: 0;
+            padding-top: 10px;
+            border-top: 1px solid gray;
+            width: 90%;
+            margin-bottom: 30px;
+            .blog-foto-1 {
+                background-image: url('../assets/img/blog/blog-foto-1.jpg');
+            }
+            .blog-foto-2 {
+                background-image: url('../assets/img/blog/blog-foto-2.jpg');
+            }
+            .blog-foto-3 {
+                background-image: url('../assets/img/blog/blog-foto-3.jpg');
+            }
+            .blog-foto-4 {
+                background-image: url('../assets/img/blog/blog-foto-4.jpg');
+            }
+            .blog-foto-5 {
+                background-image: url('../assets/img/blog/blog-foto-5.jpg');
+            }
+            .blog-foto-6 {
+                background-image: url('../assets/img/blog/blog-foto-6.jpg');
+            }
+            .foto {
+                width: 100%;
+                height: 170px;
+            }
+            h5 {
+                font-weight: 400;
+                font-size: 2.2em;
+                margin: 20px;
+            }
+            p {
+                line-height: 1.5;
+                font-size: 1.4em;
+                text-align: center;
+            }
+        }
+        .blog-statistics {
+            border-top: 1px solid lightgray;
+            padding-top: 10px;
+            margin-top: 10px;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            p {
+                font-size: 1.2em;
+            }
+            i {
+                font-size: 15px;
+            }
+            .red {
+                cursor: pointer;
+                color: red;
+            }
+    
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    aside {
+        height: 45vh;
+        background-position: 40%;
+    }
+    main {
+        .blog-wrapper {
+            margin-top: 30px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            article {
+                min-height: 380px;
+                padding: 0;
+                border: 1px solid lightgrey;
+                width: 48%;
+                position: relative;
+                .foto {
+                    height: 200px;
+                }
+                p {
+                    display: none;
+                }
+                .blog-statistics {
+                    position: absolute;
+                    bottom: 5%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 80%;
+                    margin: 0 auto;
+                    p{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1150px) {
+    body {
+        font-size: 10px;
+    }
+    aside {
+        height: 75vh;
+        font-size: 1.5em;
+    }
+    main {
+        .blog-wrapper {
+            article {
+                width: 31%;
+            }
+        }
+    }
+}
+
+.like {
+    font-weight: 800;
+}

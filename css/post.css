@@ -1,0 +1,119 @@
+main {
+  color: #37474F;
+  font-size: 10px;
+}
+
+main article {
+  max-width: 750px;
+  padding: 4em 15px;
+  margin: 0 auto;
+}
+
+main article .post-info {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main article .post-info .post-info-left {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 25px;
+}
+
+main article .post-info .post-info-left i {
+  margin-right: 5px;
+}
+
+main article .post-info .post-info-left p {
+  font-size: 10px;
+}
+
+main article .post-info .post-info-right {
+  font-size: 18px;
+}
+
+main article h2 {
+  font-size: 2.5em;
+  margin: .5em 0;
+}
+
+main article h5 {
+  font-size: 2.2em;
+  font-weight: 300;
+}
+
+main article figure {
+  margin: 1em 0;
+}
+
+main article figure .foto {
+  width: 100%;
+}
+
+main article p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 1.5em 0;
+}
+
+main article h6 {
+  margin: 1em 0;
+  padding-left: 20px;
+  font-weight: 300;
+  font-size: 2em;
+  border-left: 3px solid #57bbbf;
+}
+
+main article h4 {
+  font-size: 2.5em;
+  font-weight: 300;
+}
+
+main article .socials {
+  width: 60%;
+  font-size: 18px;
+  color: #000000;
+}
+
+main article .socials i {
+  margin-right: 30px;
+}
+
+main article .post-statistics {
+  border-top: 1px solid lightgray;
+  padding-top: 20px;
+  margin-top: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 14px;
+}
+
+main .visits {
+  display: none;
+  border-top: 1px solid lightgray;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    font-size: 15px;
+  }
+  main .post-statistics {
+    display: none;
+  }
+  main .visits {
+    display: block;
+  }
+}
+/*# sourceMappingURL=post.css.map */

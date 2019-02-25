@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>10 Tips For Relaxion</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/post.css">
+</head>
+<body>
+    <!-- menu, banner -->
+    <nav>
+        <div class="container">
+            <div class="flex">
+                <div class="logo">
+                    <h2>Allan Johnson</h2>
+                    <h1>Personal Life Coach</h1>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger" onclick="hamburgerChange(this); menuShow();">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+        </div>
+        <ol id="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html"><span>Blog</span></a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ol>
+    </nav>
+    <!-- main-post -->
+    <main>
+        <article>
+            <div class="post-info flex">
+                <div class="post-info-left flex">
+                    <i class="fas fa-user-circle"></i>
+                    <p> Admin<br>5 hours ago | 1 min read </p>
+                </div>
+                <div class="post-info-right">
+                    <i class="far fa-bookmark"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
+            <h2>Why taking action creates success</h2>
+            <h5>Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading.</p>
+            <figure>
+                <img src="assets/img/blog/blog-foto-2.jpg" class="foto">
+            </figure>
+            <p>Welcome to your blog post. Use this space to connect with your readers and potential customers in a way that’s current and interesting. Think of it as an ongoing conversation where you can share updates about business, trends, news, and more. </p>
+            <br>
+            <h6>“Do you have a design in mind for your blog? Whether you prefer a trendy postcard look or you’re going for a more editorial style blog - there’s a stunning layout for everyone.”</h6>
+            <br>
+            <p>You’ll be posting loads of engaging content, so be sure to keep your blog organized with Categories that also allow visitors to explore more of what interests them.</p>
+            <br>
+            <h4>Create Relevant Content</h4>
+            <p>Writing a blog is a great way to position yourself as an authority in your field and captivate your readers’ attention. Do you want to improve your site’s SEO ranking? Consider topics that focus on relevant keywords and relate back to your website or business. You can also add hashtags (#vacation #dream #summer) throughout your posts to reach more people, and help visitors search for relevant content.</p>
+            <br>
+            <p>Blogging gives your site a voice, so let your business’ personality shine through. Choose a great image to feature in your post or add a video for extra engagement. Are you ready to get started? Simply create a new post now. </p>
+            <div class="socials flex">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-google-plus-g"></i>
+                <i class="fas fa-link"></i>
+            </div>
+            <div class="post-statistics flex">
+                <div class="blog-views"><i class="far fa-eye"></i> 6 <i class="far fa-comment-alt"></i></div>
+                <i class="far fa-heart red" onclick="fillRed(this);"></i>
+            </div>
+            <div class="visits">0 visits</div>
+        </article>
+    </main>
+    <!-- contact -->
+    <section id="contact">
+        <div class="container">
+            <div class="flex">
+                <div class="data">
+                    <h3>Contact</h3>
+                    <p>500 Terry Francois Street<br>
+                    San Francisco, CA 94158
+                    <br><br>
+                    Tel: 123-456-7890<br>
+                    Fax: 123-456-7890
+                    <br><br>
+                    info@mysite.com
+                    </p>
+                    <div class="socials">
+                        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f icon"></i></a>
+                        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter icon"></i></a>
+                        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram icon"></i></a>
+                        <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube icon"></i></a>
+                    </div>
+                </div>
+                <!-- form -->
+                <form action="mailto: nzemla99@gmail.com" method="post" enctype="text/plain">
+                    <div>
+                        <input name="name" type="text" placeholder="Name"><br>
+                        <input name="email" type="text" placeholder="Email"><br>
+                        <input name="subject" type="text" placeholder="Subject"><br>
+                        <textarea name="message" placeholder="Message"></textarea>
+                        <div class="contact-buttons flex">
+                            <input type="reset" value="Reset">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer>
+        <p>&copy 2019 by Personal Life Coach. Inspired by Wix.com</p>
+    </footer>
+</body>
+</html>

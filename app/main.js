@@ -49,3 +49,8 @@ let learnMore3 = () => {
   document.getElementById('h4-more').innerHTML = document.getElementById('h4-3').textContent;
   document.getElementById('h5-more').innerHTML = document.getElementById('h5-3').textContent;
 }
+
+// fill hearts
+let fillRed = (heart) => {
+  $(heart).toggleClass('like');
+}

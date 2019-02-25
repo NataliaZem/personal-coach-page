@@ -1,1 +1,163 @@
-/* No CSS *//*# sourceMappingURL=blog.css.map */
+aside {
+  padding: 4em 0;
+  background-image: url("../assets/img/blog/kayak.jpg");
+  background-position: 45%;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 60vh;
+}
+
+main {
+  padding: 3em 15px;
+}
+
+main .blog-wrapper {
+  max-width: 1050px;
+  margin: 0 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .blog-wrapper article {
+  padding: 0;
+  padding-top: 10px;
+  border-top: 1px solid gray;
+  width: 90%;
+  margin-bottom: 30px;
+}
+
+main .blog-wrapper article .blog-foto-1 {
+  background-image: url("../assets/img/blog/blog-foto-1.jpg");
+}
+
+main .blog-wrapper article .blog-foto-2 {
+  background-image: url("../assets/img/blog/blog-foto-2.jpg");
+}
+
+main .blog-wrapper article .blog-foto-3 {
+  background-image: url("../assets/img/blog/blog-foto-3.jpg");
+}
+
+main .blog-wrapper article .blog-foto-4 {
+  background-image: url("../assets/img/blog/blog-foto-4.jpg");
+}
+
+main .blog-wrapper article .blog-foto-5 {
+  background-image: url("../assets/img/blog/blog-foto-5.jpg");
+}
+
+main .blog-wrapper article .blog-foto-6 {
+  background-image: url("../assets/img/blog/blog-foto-6.jpg");
+}
+
+main .blog-wrapper article .foto {
+  width: 100%;
+  height: 170px;
+}
+
+main .blog-wrapper article h5 {
+  font-weight: 400;
+  font-size: 2.2em;
+  margin: 20px;
+}
+
+main .blog-wrapper article p {
+  line-height: 1.5;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+main .blog-wrapper .blog-statistics {
+  border-top: 1px solid lightgray;
+  padding-top: 10px;
+  margin-top: 10px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .blog-wrapper .blog-statistics p {
+  font-size: 1.2em;
+}
+
+main .blog-wrapper .blog-statistics i {
+  font-size: 15px;
+}
+
+main .blog-wrapper .blog-statistics .red {
+  cursor: pointer;
+  color: red;
+}
+
+@media screen and (min-width: 768px) {
+  aside {
+    height: 45vh;
+    background-position: 40%;
+  }
+  main .blog-wrapper {
+    margin-top: 30px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  main .blog-wrapper article {
+    min-height: 380px;
+    padding: 0;
+    border: 1px solid lightgrey;
+    width: 48%;
+    position: relative;
+  }
+  main .blog-wrapper article .foto {
+    height: 200px;
+  }
+  main .blog-wrapper article p {
+    display: none;
+  }
+  main .blog-wrapper article .blog-statistics {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 80%;
+    margin: 0 auto;
+  }
+  main .blog-wrapper article .blog-statistics p {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  body {
+    font-size: 10px;
+  }
+  aside {
+    height: 75vh;
+    font-size: 1.5em;
+  }
+  main .blog-wrapper article {
+    width: 31%;
+  }
+}
+
+.like {
+  font-weight: 800;
+}
+/*# sourceMappingURL=blog.css.map */
