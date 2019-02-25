@@ -316,6 +316,9 @@ article button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .presentation figure div {
@@ -348,21 +351,22 @@ article button {
   }
   .presentation figure {
     width: 50%;
-    height: 70vh;
+  }
+  .presentation figure div {
     position: relative;
   }
-  .presentation figure::after, .presentation figure::before {
+  .presentation figure div::after, .presentation figure div::before {
     position: absolute;
     content: '';
     width: 50%;
     height: 5px;
     background-color: #000000;
   }
-  .presentation figure::before {
+  .presentation figure div::before {
     top: 0;
     right: 0;
   }
-  .presentation figure::after {
+  .presentation figure div::after {
     bottom: 0;
     left: 0;
   }
