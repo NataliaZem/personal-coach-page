@@ -1,1 +1,1 @@
-life version: https://nataliazem.github.io/motivation-page/
+life version: https://nataliazem.github.io/personal-coach-page/
